@@ -4,7 +4,8 @@ import (
 	"fmt"
 )
 
-var toBeSorted [10]int = [10]int{0, 1, 4, 8, 2, 5, 6, 8, 4, 9}
+var toBeSorted [10]int = [10]int{1, 4, 8, 2, 5, 6, 8, 4, 9, 2}
+var anotherArray [6]int = [6]int{-12, 3, 2, 4, 1}
 
 func bubbleSort(input [10]int) {
 	//n is the number of items in our list.
@@ -20,6 +21,8 @@ func bubbleSort(input [10]int) {
 				//Swap values using Go's tuple assignment
 				input[i], input[i-1] = input[i-1], input[i]
 				swapped = true
+
+				fmt.Println(input)
 			}
 		}
 	}
@@ -28,6 +31,5 @@ func bubbleSort(input [10]int) {
 }
 
 func main() {
-	fmt.Println("Hello World")
 	bubbleSort(toBeSorted)
 }
